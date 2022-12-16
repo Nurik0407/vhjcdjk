@@ -1,5 +1,6 @@
 package service;
 
+import ClassException.UniqueConstraintException;
 import model.Book;
 import model.User;
 
@@ -15,11 +16,11 @@ public interface UserService{
 
     String removeUserByName(String name);
 
-    void updateUser(Long id);//kaisil pole ozgorsun dep surap, oshogo jarasha ozgortuu
+    void updateUser(Long id) throws UniqueConstraintException;//kaisil pole ozgorsun dep surap, oshogo jarasha ozgortuu
 
     void groupUsersByGender();
 
-    String buyBooks(String name, List<Book>books);
+    String buyBooks( List<Book>books);
 
 
 }

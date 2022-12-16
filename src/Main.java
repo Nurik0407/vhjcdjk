@@ -1,3 +1,5 @@
+import model.User;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -10,7 +12,6 @@ public class Main {
         // Китептин автору бош болбошу керек. Болбосо EmptyStackException ыргытсын.
 
 
-        
 
     }
 }

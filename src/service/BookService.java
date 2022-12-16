@@ -1,12 +1,13 @@
 package service;
 
+import ClassException.UniqueConstraintException;
 import model.Book;
 
 import java.util.List;
 
 public interface BookService {
 
-    List <Book> createBooks(List<Book>books);
+    List <Book> createBooks(List<Book>books) throws UniqueConstraintException;
 
     List<Book> getAllBooks();
 
@@ -18,7 +19,7 @@ public interface BookService {
 
     List<Book> filterBooksByPublishedYear();// Konsolgo akyrky 10 jilda chygarylgan kitepter chyksyn
 
-    List<Book> getBookByInitialLetter();
+    List<Book> getBookByInitialLetter() throws Exception;
 
     Book maxPriceBook();
 
